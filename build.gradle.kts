@@ -21,6 +21,15 @@ buildscript {
     }
 }
 
+signingConfigs {
+     release {
+                keyAlias keystoreProperties['guoguo']
+                keyPassword keystoreProperties['guoguo131466']
+                storeFile file(keystoreProperties['guoguo.jks'])
+                storePassword keystoreProperties['guoguo131466']
+            }
+}
+
 plugins {
     alias(libs.plugins.klint)
     alias(libs.plugins.moduleDependencyGraph)
