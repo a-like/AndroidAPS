@@ -29,6 +29,14 @@ signingConfigs {
                 storePassword keystoreProperties['guoguo131466']
             }
 }
+buildTypes {
+      release {
+                // TODO: Add your own signing config for the release build.
+                // Signing with the debug keys for now, so `flutter run --release` works.
+                // signingConfig signingConfigs.debug
+                signingConfig signingConfigs.release
+            }
+        }
 
 plugins {
     alias(libs.plugins.klint)
